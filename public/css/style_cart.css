@@ -1,0 +1,64 @@
+.bg-header{
+	background-color:#D5C8A9;
+}
+.carousel-control.left{
+	background-image: none;
+}
+.carousel-control.right{
+	background-image: none;
+}
+.banner{
+	display: block; margin-left: auto; margin-right: auto;
+}
+.bg-product{
+	background-color: #D5C8A9
+}
+.bg-product-list{
+	background-color: #FFFFFF
+}
+.product-detail {
+    border: 1px solid #DCD3B8;
+    padding: 5px 5px;
+    /* border-collapse: collapse; */
+}
+.ten{
+	 font-weight: bold;
+	 text-align: center;
+	 padding-top: 5px;
+}
+.gia{
+	color: #FF0000;
+	font-weight: bold;
+	text-align: center;
+	font-size: 16px;
+}
+.chitiet{
+	background: url('../images/bg-see-more.png') no-repeat center;
+	text-align: center;
+	color: #FFFFFF;
+}
+.chitiet a{
+	color: #FFFFFF;
+}
+.bg-footer{
+	background-color: #DBD4BA;
+}
+.lh{
+	padding:15px 7px 10px 4px;
+}
+.address{
+	padding-top: 10px;
+}
+.phone{
+	padding-top: 10px;
+}
+.phantrang{
+	display: block; margin-left: auto; margin-right: auto;
+
+}
+.menu li {
+	font-size: 16px;
+}
+.giohang{
+	display: block; margin-left: auto; margin-right: auto;
+}

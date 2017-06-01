@@ -1,0 +1,1072 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"now",
+				"now_month-1"
+			],
+			[
+				"ar",
+				"arrTT"
+			],
+			[
+				"arr",
+				"arrPay"
+			],
+			[
+				"da",
+				"dathanhtoan"
+			],
+			[
+				"chiti",
+				"chitietthu"
+			],
+			[
+				"hoa",
+				"hoadonxuat_id"
+			],
+			[
+				"whe",
+				"where"
+			],
+			[
+				"or",
+				"orders"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"tr",
+				"trangthai"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"so",
+				"sotienthu"
+			],
+			[
+				"ex",
+				"explode"
+			],
+			[
+				"Re",
+				"Response"
+			],
+			[
+				"to",
+				"total_sales"
+			],
+			[
+				"o",
+				"order"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"chec",
+				"checkboxes.length"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"ng",
+				"ngaythu"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"sotien",
+				"sotiencanthanhtoan"
+			],
+			[
+				"e",
+				"else\t<?php else: ?>"
+			],
+			[
+				"gete",
+				"getElementById( elementId: DOMString ): Element\tDocument"
+			],
+			[
+				"do",
+				"document"
+			],
+			[
+				"text",
+				"text-info"
+			],
+			[
+				"fo",
+				"form-control"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"check",
+				"checkAll"
+			],
+			[
+				"num",
+				"number"
+			],
+			[
+				"a",
+				"alert"
+			],
+			[
+				"l",
+				"length: int\tArray"
+			],
+			[
+				"s",
+				"split"
+			],
+			[
+				"ma",
+				"margin-left"
+			],
+			[
+				"nhan",
+				"nhanvien"
+			],
+			[
+				"thuti",
+				"thu-tien"
+			],
+			[
+				"onc",
+				"onclick\tAttr"
+			],
+			[
+				"san",
+				"sanpham"
+			],
+			[
+				"pr",
+				"print"
+			],
+			[
+				"split",
+				"split( separator: string, limit?: number ): string\tNativeScript - String"
+			],
+			[
+				"de",
+				"detail"
+			],
+			[
+				"pro",
+				"product_number"
+			],
+			[
+				"por",
+				"product_number"
+			],
+			[
+				"w",
+				"while\twhile …"
+			],
+			[
+				"replace",
+				"str_replace"
+			],
+			[
+				"php",
+				"php"
+			],
+			[
+				"ngay",
+				"ngaygiaohang"
+			],
+			[
+				"dis",
+				"discount"
+			],
+			[
+				"ps",
+				"password"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"ac",
+				"account"
+			],
+			[
+				"us",
+				"uses"
+			],
+			[
+				"btn",
+				"btn-primary"
+			],
+			[
+				"ta",
+				"table"
+			],
+			[
+				"chitiet",
+				"chitietxuat"
+			],
+			[
+				"Li",
+				"listExport"
+			],
+			[
+				"nha",
+				"nhanvien"
+			],
+			[
+				"chi",
+				"chitietchi"
+			],
+			[
+				"chit",
+				"chitietthu"
+			],
+			[
+				"co",
+				"col-xs-6"
+			],
+			[
+				"col",
+				"col-xs-2"
+			],
+			[
+				"op",
+				"option\tTag"
+			],
+			[
+				"j",
+				"json_encode"
+			],
+			[
+				"time",
+				"time1"
+			],
+			[
+				"sub",
+				"subMonth"
+			],
+			[
+				"tim",
+				"time1"
+			],
+			[
+				"orr",
+				"order1"
+			],
+			[
+				"dat",
+				"date"
+			],
+			[
+				"wh",
+				"where"
+			],
+			[
+				"li",
+				"listProductID"
+			],
+			[
+				"nu",
+				"number"
+			],
+			[
+				"f",
+				"flag"
+			],
+			[
+				"lis",
+				"list"
+			],
+			[
+				"array_p",
+				"array_push"
+			],
+			[
+				"sa",
+				"sanpham_id"
+			],
+			[
+				"list",
+				"listProduct"
+			],
+			[
+				"nhom",
+				"nhomtuoi"
+			],
+			[
+				"ten",
+				"tenthuonghieu"
+			],
+			[
+				"nho",
+				"nhomtuoi_id"
+			],
+			[
+				"thu",
+				"thuonghieu_id"
+			],
+			[
+				"thuongh",
+				"thuonghieu"
+			],
+			[
+				"ch",
+				"check"
+			],
+			[
+				"coun",
+				"count_export"
+			],
+			[
+				"count",
+				"count_avaiable"
+			],
+			[
+				"se",
+				"select3"
+			],
+			[
+				"opt",
+				"option_time"
+			],
+			[
+				"bt",
+				"btn-success"
+			],
+			[
+				"funn",
+				"function"
+			],
+			[
+				"tho",
+				"thong-ke-san-pham"
+			],
+			[
+				"option",
+				"option_selected_time"
+			],
+			[
+				"sle",
+				"selected"
+			],
+			[
+				"trang",
+				"trang-chu"
+			],
+			[
+				"Mo",
+				"Morris.js"
+			],
+			[
+				"m",
+				"money_import"
+			],
+			[
+				"te",
+				"text-indent"
+			],
+			[
+				"align",
+				"textAlign\tStyle CSS"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"ba",
+				"background-image"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"sp",
+				"span"
+			],
+			[
+				"date",
+				"date_format"
+			],
+			[
+				"dia",
+				"diachi"
+			],
+			[
+				"getE",
+				"getElementById( elementId: DOMString ): Element\tDocument"
+			],
+			[
+				"ph",
+				"php\t<?php … ?>"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"tb",
+				"table"
+			],
+			[
+				"we",
+				"web-bansua-admin"
+			],
+			[
+				"b",
+				"button"
+			],
+			[
+				"phi",
+				"phiship"
+			],
+			[
+				"danh",
+				"danh-sach-nhap-xuat"
+			],
+			[
+				"forma",
+				"money_format"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"rou",
+				"route"
+			],
+			[
+				"impo",
+				"import-export"
+			],
+			[
+				"conf",
+				"confirm( message: string ): Promiseboolean\tNativeScript - Module ui/dialogs"
+			],
+			[
+				"exp",
+				"expireDate"
+			],
+			[
+				"input",
+				"input_number"
+			],
+			[
+				"produ",
+				"productCombobox"
+			],
+			[
+				"prod",
+				"productCombobox"
+			],
+			[
+				"con",
+				"control-label"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"i",
+				"input"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"sy",
+				"style\tAttr"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "resources/views/web-bansua/home.blade.php",
+			"settings":
+			{
+				"buffer_size": 6198,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/views/web-bansua/index.blade.php",
+			"settings":
+			{
+				"buffer_size": 7076,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "routes/web.php",
+			"settings":
+			{
+				"buffer_size": 13433,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: S",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/xampp/htdocs/ptpmcn",
+		"/D/xampp/htdocs/ptpmcn/app/Http/Controllers",
+		"/D/xampp/htdocs/ptpmcn/resources/views",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua"
+	],
+	"file_history":
+	[
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/import-export/xuathang.blade.php",
+		"/D/xampp/htdocs/ptpmcn/readme.md",
+		"/D/xampp/htdocs/ptpmcn/app/ChiTietChi.php",
+		"/D/xampp/htdocs/ptpmcn/app/Http/Controllers/UserController.php",
+		"/D/xampp/htdocs/ptpmcn/app/TinTuc.php",
+		"/D/xampp/htdocs/ptpmcn/app/ThuongHieu.php",
+		"/D/xampp/htdocs/ptpmcn/app/SoHoaDon.php",
+		"/D/xampp/htdocs/ptpmcn/app/Slide.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/import-export/xuathangtudong.blade.php",
+		"/D/xampp/htdocs/ptpmcn/app/Http/Controllers/OrderController.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/client/cart.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/order/dongygiaohang.blade.php",
+		"/D/xampp/htdocs/ptpmcn/routes/web.php",
+		"/D/xampp/htdocs/ptpmcn/app/Http/Controllers/ExportController.php",
+		"/D/xampp/htdocs/ptpmcn/app/Http/Controllers/DepositController.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/deposit-pay/thutien_v2.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/order/hoanthanh.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/order/timkiemdonhang.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/order/xuatkhoguikhachhang.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/import-export/export_bill.blade.php",
+		"/D/xampp/htdocs/ptpmcn/app/Http/Controllers/AdvertiseController.php",
+		"/D/xampp/htdocs/ptpmcn/app/Cart.php",
+		"/D/xampp/htdocs/ptpmcn/app/ChiTietNhap.php",
+		"/D/xampp/htdocs/ptpmcn/app/ChiTietXuat.php",
+		"/D/xampp/htdocs/ptpmcn/app/Http/Controllers/CartController.php",
+		"/D/xampp/htdocs/ptpmcn/routes/api.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/index.blade.php",
+		"/D/xampp/htdocs/ptpmcn/public/web-bansua-admin/style.css",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/order/choxuly.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/deposit-pay/danhsachthuchi.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua/cart.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/home/home.blade.php",
+		"/D/xampp/htdocs/ptpmcn/app/Http/Controllers/StaffController.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/deposit-pay/thutien.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/home.blade.php",
+		"/C/Users/haibn/AppData/Local/Temp/Rar$DIa0.653/home.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/product/timkiemsanpham.blade.php",
+		"/D/xampp/htdocs/ptpmcn/app/Http/Controllers/ProductController.php",
+		"/C/Users/haibn/AppData/Local/Temp/Rar$DIa0.168/index.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/layouts/home.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/client/product_detail.blade.php",
+		"/D/xampp/htdocs/ptpmcn/app/SanPham.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/layouts/product.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/client/home.blade.php",
+		"/D/xampp/htdocs/ptpmcn/vendor/symfony/http-foundation/File/UploadedFile.php",
+		"/D/xampp/htdocs/ptpmcn/app/NhomTuoi.php",
+		"/D/xampp/htdocs/ptpmcn/app/HoaDonXuat.php",
+		"/D/xampp/htdocs/ptpmcn/app/KhuyenMai.php",
+		"/D/xampp/htdocs/ptpmcn/app/Http/Controllers/HomeController.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/layouts/login.blade.php",
+		"/D/xampp/htdocs/ptpmcn/public/products/css/style.css",
+		"/D/xampp/htdocs/ptpmcn/public/js/app.js",
+		"/D/xampp/htdocs/ptpmcn/public/css/app.css",
+		"/D/xampp/htdocs/ptpmcn/public/css/content_home.css",
+		"/D/xampp/htdocs/ptpmcn/public/css/default.css",
+		"/D/xampp/htdocs/ptpmcn/public/css/header.css",
+		"/D/xampp/htdocs/ptpmcn/public/css/login.css",
+		"/D/xampp/htdocs/ptpmcn/public/css/menu_left.css",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua/index.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua/detail-product.blade.php",
+		"/D/xampp/htdocs/ptpmcn/app/Http/Controllers/CustomerController.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/account/taikhoan.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/account/nhanvien.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/import-export/import.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/customer/danhsachkhachhang.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/statistics-report/thongkecongno.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/statistics-report/thongkehanghoa.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/import-export/import_bill.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/import-export/danhsachnhapxuat.blade.php",
+		"/D/xampp/htdocs/ptpmcn/app/Http/Controllers/ImportController.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/sign-in.blade.php",
+		"/D/xampp/htdocs/ptpmcn/app/Http/Controllers/StatisticsController.php",
+		"/D/xampp/htdocs/ptpmcn/app/Http/Controllers/ProviderController.php",
+		"/D/xampp/htdocs/ptpmcn/app/Http/Controllers/PayController.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/product/danhmucsanpham.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/product/danhsachnhomtuoi.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/product/danhsachthuonghieu.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/provider/danhsachnhacungcap.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/product/themmoi.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/deposit-pay/chitien.blade.php",
+		"/D/xampp/htdocs/ptpmcn/public/js/number_format.js",
+		"/D/xampp/htdocs/ptpmcn/public/css/style.css",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/import-export/import_return.blade.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua/check-out.blade.php",
+		"/D/xampp/htdocs/ptpmcn/public/js/ckeditor/ckeditor.js",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/import-export/list_import.blade.php",
+		"/D/xampp/htdocs/ptpmcn/public/js/dataTable/jquery.dataTables.min.js",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/index_older/index.blade.php",
+		"/D/xampp/htdocs/ptpmcn/public/css/sb-admin-2.css",
+		"/D/xampp/htdocs/ptpmcn/public/css/dataTable/dataTables.bootstrap4.css",
+		"/D/xampp/htdocs/ptpmcn/public/css/dataTable/dataTables.bootstrap.min.css",
+		"/D/xampp/htdocs/ptpmcn/public/css/bootstrap.min.css",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/test.blade.php",
+		"/D/xampp/htdocs/ptpmcn/public/css/style_cart.css",
+		"/D/xampp/htdocs/ptpmcn/public/web-bansua/style.css",
+		"/D/xampp/htdocs/ptpmcn/app/HoaDonNhap.php",
+		"/D/xampp/htdocs/ptpmcn/app/PhieuThu.php",
+		"/C/Users/haibn/Downloads/import.blade.php",
+		"/C/Users/haibn/Downloads/Compressed/[Sharecode.vn] Share full code haivl.com PHP/share-full-code-haivl.com/m/hot.php",
+		"/C/Users/haibn/Downloads/ImportController.php",
+		"/C/Users/haibn/Downloads/ExportController.php",
+		"/D/xampp/htdocs/ptpmcn/vendor/barryvdh/laravel-dompdf/config/dompdf.php",
+		"/D/xampp/htdocs/ptpmcn/app/Http/Controllers/PDFController.php",
+		"/C/Users/haibn/Downloads/Invoice Laravel 5/app/Http/Controllers/HomeController.php",
+		"/C/Users/haibn/Downloads/Invoice Laravel 5/app/Http/Controllers/Invoice.php",
+		"/C/Users/haibn/Downloads/Invoice Laravel 5/app/Http/Controllers/WelcomeController.php",
+		"/D/xampp/htdocs/ptpmcn/storage/framework/views/c98ccfa3ef39c660e43700b01e83223349019709.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/import-export/index.blade.php",
+		"/D/xampp/htdocs/ptpmcn/public/web-bansua-admin/set.css",
+		"/D/xampp/htdocs/ptpmcn/vendor/barryvdh/laravel-dompdf/src/Facade.php",
+		"/D/xampp/htdocs/ptpmcn/vendor/barryvdh/laravel-dompdf/src/PDF.php",
+		"/D/xampp/htdocs/ptpmcn/vendor/barryvdh/laravel-dompdf/src/ServiceProvider.php",
+		"/D/xampp/htdocs/ptpmcn/config/app.php",
+		"/D/xampp/htdocs/ptpmcn/resources/views/web-bansua-admin/product/danhsachthemmoi.blade.php",
+		"/C/Users/haibn/Desktop/dung/app/Http/Controllers/ProductController.php",
+		"/D/xampp/htdocs/ptpmcn/app/PhieuChi.php",
+		"/D/xampp/htdocs/ptpmcn/app/ChiTietThu.php",
+		"/D/xampp/htdocs/ptpmcn/config/database.php",
+		"/E/New folder/2014_10_12_000000_create_users_table.php",
+		"/D/xampp/htdocs/ptpmcn/database/migrations/2016_10_28_105959_create_hoadonxuat_table.php",
+		"/D/xampp/htdocs/ptpmcn/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/D/xampp/htdocs/ptpmcn/database/migrations/2016_10_28_111258_create_phieuthu_table.php",
+		"/D/xampp/htdocs/ptpmcn/database/migrations/2016_10_28_111309_create_phieuchi_table.php",
+		"/D/xampp/htdocs/ptpmcn/database/migrations/2016_11_10_103307_create_chitietthu_table.php",
+		"/D/xampp/htdocs/ptpmcn/database/migrations/2016_11_10_103323_create_chitietchi_table.php",
+		"/D/xampp/htdocs/ptpmcn/database/migrations/2016_10_28_111142_create_chitietxuat_table.php",
+		"/D/xampp/htdocs/ptpmcn/database/migrations/2016_10_28_111128_create_chitietnhap_table.php",
+		"/D/xampp/htdocs/ptpmcn/database/migrations/2016_10_28_110012_create_hoadonnhap_table.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"xuathang",
+			"updateOrder",
+			"Tất cả",
+			"images",
+			"upload",
+			"format_Time",
+			"getThuongHieu",
+			"getNhomTuoi",
+			"productDetail",
+			"function search",
+			"search",
+			"account",
+			"date",
+			"1",
+			"groupBy",
+			"getProduct",
+			"home-admin",
+			"xkey",
+			"ykeys",
+			"xkey",
+			"19",
+			"Bar Chart Example",
+			"acti",
+			"act",
+			"acti",
+			"form-h",
+			"total-price",
+			"selectpicker",
+			"filtered from",
+			"No data available in tab",
+			"No data available in table",
+			"aria-con",
+			"aria-contr",
+			"_filter",
+			"Kích th",
+			"Kích thức trang",
+			"myTable_length",
+			"Previous",
+			"entries",
+			"Show",
+			"Search:",
+			"Show",
+			"entries",
+			"svg",
+			"04",
+			"ex",
+			"myTable",
+			"vụ",
+			"in_array",
+			"myTable",
+			"aja",
+			"SP",
+			"java",
+			"Sp",
+			"web-bansua-admin",
+			"');\n",
+			"/>\n",
+			"themmoi",
+			"cap-nhat",
+			"updateProduct",
+			"deleteProduct",
+			"<div class=\"modal-body\">\n            \n            <div class=\"chonnguoigiaohang\">",
+			"100",
+			"da phan cong",
+			"16",
+			"navbar-static-top",
+			"searchOrder",
+			"quyen",
+			"nguoigiaohang",
+			"search",
+			"web-bansua-admin",
+			"image",
+			"admin",
+			"web-ban",
+			"ss",
+			"web-bansua",
+			"style.css",
+			"products",
+			"web-bansua",
+			"web-ban",
+			"product-img",
+			"product-de",
+			"product",
+			".product",
+			".product-de",
+			"img-responsive",
+			"hinhanh",
+			"product-detail",
+			" product",
+			" product-detail",
+			"hinhanh",
+			"img-responsive",
+			"product-block",
+			"    \n",
+			"floor-collection",
+			".pro-name",
+			".text-left",
+			".product-detail",
+			"total__price",
+			"total_price",
+			".total_price",
+			"total_price",
+			"price",
+			".save-price",
+			"product",
+			"pro",
+			"product",
+			"product_p",
+			"product_image",
+			"product_images",
+			"products-detail",
+			"addToCart1",
+			".price",
+			"product-price",
+			".qty",
+			".cart__items tbody tr td",
+			"qty",
+			"th",
+			"td.price",
+			"quantity",
+			"products",
+			"products-detail",
+			"product-price",
+			"incre",
+			"cart-update-cart",
+			"quantity_line",
+			"qty",
+			"checkout"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "resources/views/web-bansua/home.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6198,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1260.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "resources/views/web-bansua/index.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7076,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4930,
+								4936
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "routes/web.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 13433,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3974,
+								3980
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 495.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ptpmcn.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 320.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

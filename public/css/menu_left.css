@@ -1,0 +1,65 @@
+.col{
+	float: left;
+	min-width:200px;
+	position: relative;
+	margin-top: 20px;
+}
+.danhmuc{
+	margin-bottom: 10px;
+	background: #F9F9F9;
+	border-bottom: 1px solid #C8C7C7;
+	border-radius: 4px;
+	//box-shadow: 2px 2px 1px #9F9F9F;
+}
+.top{
+	background-image:url('../upload/logo/danhmuc.png');
+	//background: #2177F9;
+	width: 100%;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	color:white;
+	font-weight: bold;
+	font-size: 110%;
+	border-radius: 4px;
+	border-bottom: 1px solid #CACACA;
+}
+.element{
+	height: 35px;
+	line-height: 35px;
+	border-bottom: 1px dotted #D8D8D8;
+	border-left: 1px solid #D6D6D6;
+	border-right: 1px solid #D6D6D6;
+	overflow: hidden;
+}
+.element form{
+	margin:auto;
+	margin-top: 5px;
+	width: 80%;
+}
+.element form input{
+	width: 100%;
+	height: 25px;
+	font-size: 90%;
+	color:#808080;
+	border: 1px solid #CBCBCB;
+	border-radius: 4px;
+}
+.element a{
+	display: inline-block;
+	width: 100%;
+	background-image: url('../upload/logo/element.png');
+	background-repeat: no-repeat;
+	background-position: 20px 13px;
+	padding-left: 45px;
+	padding-right: 20px;
+	color:#818181;
+}
+.element a:hover{
+	background-color: #C1C1C1;
+	color:#2C7BFF;
+	background-image: url('../upload/logo/element2.png');
+}
+#resultSearch{
+	display: none;
+}

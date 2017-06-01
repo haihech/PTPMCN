@@ -1,0 +1,67 @@
+.bg-header{
+    background-color:#D5C8A9;
+    /*height: 130px;*/
+}
+.carousel-control.left{
+    background-image: none;
+}
+.carousel-control.right{
+    background-image: none;
+}
+.banner{
+    display: block; margin-left: auto; margin-right: auto;
+}
+.bg-product{
+    background-color: #D5C8A9
+}
+.bg-product-list{
+    background-color: #FFFFFF
+}
+
+.ten{
+     font-weight: bold;
+     text-align: center;
+     padding-top: 5px;
+}
+.gia{
+    color: #FF0000;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+}
+.chitiet{
+    background: url('../images/bg-see-more.png') no-repeat center;
+    text-align: center;
+    color: #FFFFFF;
+}
+.chitiet a{
+    color: #FFFFFF;
+}
+.bg-footer{
+    background-color: #DBD4BA;
+}
+.lh{
+    padding:15px 7px 10px 4px;
+}
+.address{
+    padding-top: 10px;
+}
+.phone{
+    padding-top: 10px;
+}
+.phantrang{
+    display: block; margin-left: auto; margin-right: auto;
+
+}
+
+#icon-search{
+    background-image:url(../images/search-icon.png); 
+    background-repeat: no-repeat; 
+    background-position: 2px 3px;
+}
+
+#icon_add{
+    background-image:url(../images/add-icon.png); 
+    background-repeat: no-repeat; 
+    background-position: 2px 3px;
+}

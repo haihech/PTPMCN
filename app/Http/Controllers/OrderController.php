@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\HoaDonXuat;
 use App\ChiTietXuat;
 use App\PhanDonHang;
+use App\PhanQuyen;
 use Session;
 use App\NhanVien;
 use DB;
@@ -16,28 +17,20 @@ class OrderController extends Controller
 {
 
     public function waitProcess(Request $request){
-        
-        $orders = DB::table('hoadonxuat')->where('trangthai', 'Chờ xử lý')
-                ->join('users', 'users.id', '=', 'hoadonxuat.khachhang_id')
-                ->join('chitietxuat', 'hoadonxuat.id', '=', 'chitietxuat.hoadonxuat_id')
 
-                ->select('users.ten as tenkh', 'users.sdt', 'users.email','hoadonxuat.id', 'hoadonxuat.ngaygiaohang','hoadonxuat.created_at', 'hoadonxuat.trangthai', 'hoadonxuat.phuongthucthanhtoan', 'hoadonxuat.diachigiaohang', 'hoadonxuat.phiship', 'hoadonxuat.note', DB::raw('sum(chitietxuat.soluong*chitietxuat.giaban) AS total_sales'))
+        $hd = new HoaDonXuat();
+        $orders = $hd->listOrderWaitProcess();
 
-                ->groupBy('hoadonxuat.id', 'users.ten', 'users.sdt', 'users.email', 'hoadonxuat.ngaygiaohang','hoadonxuat.created_at', 'hoadonxuat.trangthai', 'hoadonxuat.phuongthucthanhtoan', 'hoadonxuat.diachigiaohang', 'hoadonxuat.phiship', 'hoadonxuat.note')
-                ->get();
-        
         $arr = array();
         $i = 0;
         
         foreach ($orders as $order) {
-            ++$i;
-        	$orderDetails = DB::table('chitietxuat')->where('hoadonxuat_id', $order->id)
-                	->join('sanpham', 'chitietxuat.sanpham_id', '=', 'sanpham.id')
-                	->select('chitietxuat.*', 'sanpham.ten as name')
-                	->get();
-            $arr[$order->id] = $orderDetails;
+            
+            $orderDetails = $hd->getOrderDetail($order->id);       
+            $arr[$i] = $orderDetails;
+            $i++;
         }
-    	return view('web-bansua-admin.order.choxuly', ['orders' => $orders, 'arr' => $arr,'i' => $i]);
+        return view('web-bansua-admin.order.choxuly', ['orders' => $orders, 'arr' => $arr,'i' => $i]);
     }
 
     public function updateCustomer(Request $request){
@@ -45,7 +38,8 @@ class OrderController extends Controller
             $data = $request->key;
             $list = explode("---", $data);
 
-            $update = DB::table('hoadonxuat')->where('id', $list[3])->update(['diachigiaohang'=>$list[0], 'ngaygiaohang'=>$list[1]."/".$list[2]]);
+            $order = new HoaDonXuat();
+            $update = $order->updateCustomer($list[3], $list[0], $list[1], $list[2]);
             if($update){
                 return Response("Cập nhật thành công");
             }
@@ -53,32 +47,24 @@ class OrderController extends Controller
     }
 
     public function confirmOrder(Request $request, $id){
-    	$order = HoaDonXuat::where('id', $id)->update(['trangthai' => 'Đồng ý giao hàng']);
+        $order = HoaDonXuat::where('id', $id)->update(['trangthai' => 'Đồng ý giao hàng']);
         return redirect()->route('choxuly');
     }
 
     public function cancelOrder(Request $request, $id){
-    	$order = HoaDonXuat::where('id', $id)->update(['trangthai' => 'Hủy']);
+        $order = HoaDonXuat::where('id', $id)->update(['trangthai' => 'Hủy']);
         return redirect()->route('choxuly');
     }
 
 
     public function confirmed(){
 
-        $orders = DB::table('hoadonxuat')->where('hoadonxuat.trangthai', 'Đồng ý giao hàng')
-                ->join('users', 'users.id', '=', 'hoadonxuat.khachhang_id')
-                ->join('chitietxuat', 'hoadonxuat.id', '=', 'chitietxuat.hoadonxuat_id')
-                
-                ->select('users.ten as tenkh', 'hoadonxuat.id','hoadonxuat.created_at', 'hoadonxuat.trangthai', 'hoadonxuat.phuongthucthanhtoan', 'hoadonxuat.diachigiaohang', 'hoadonxuat.nguoigiaohang', 'hoadonxuat.phiship', DB::raw('sum(chitietxuat.soluong*chitietxuat.giaban) AS total_sales'))
-
-                ->groupBy('hoadonxuat.id', 'users.ten', 'hoadonxuat.created_at', 'hoadonxuat.trangthai', 'hoadonxuat.phuongthucthanhtoan', 'hoadonxuat.diachigiaohang', 'hoadonxuat.nguoigiaohang', 'hoadonxuat.phiship')
-                ->get();
+        $hd = new HoaDonXuat();
+        $orders = $hd->listOrderConfirmed();
         $i = count($orders);
 
-        $giaohang = DB::table('phanquyen')
-                    ->where('quyen_id', "quyen-17")
-                    ->join('nhanvien', 'nhanvien.manv', '=', 'phanquyen.nhanvien_manv')
-                    ->select('nhanvien.*')->get();
+        $pq = new PhanQuyen();
+        $giaohang = $pq->getShipper();
         $arr = array('Tất cả', 'Chưa phân công giao hàng', 'Đã phân công giao hàng' );
         return view('web-bansua-admin.order.dongygiaohang', ['orders' => $orders, 'giaohang' => $giaohang,'i' => $i, 'arr' => $arr]);
     }
@@ -87,48 +73,24 @@ class OrderController extends Controller
         if(isset($_GET['timkiemxacnhan'])){
             if(!empty($_GET['option_selected1'])){
                 $selected = $_GET['option_selected1'];
+                $hd = new HoaDonXuat();
+                $pq = new PhanQuyen();
+                $giaohang = $pq->getShipper();
                 if($selected === 'Tất cả'){
                     return $this->confirmed();
                     
                 }
                 else if($selected === 'Chưa phân công giao hàng'){
-                    $orders = DB::table('hoadonxuat')->where('trangthai', "Đồng ý giao hàng")
-                            ->whereNull('nguoigiaohang')
-                            ->join('users', 'users.id', '=', 'hoadonxuat.khachhang_id')
-                            ->join('chitietxuat', 'hoadonxuat.id', '=', 'chitietxuat.hoadonxuat_id')
-                            
-                            ->select('users.ten as tenkh', 'hoadonxuat.id','hoadonxuat.created_at', 'hoadonxuat.trangthai', 'hoadonxuat.phuongthucthanhtoan', 'hoadonxuat.diachigiaohang', 'hoadonxuat.nguoigiaohang', 'hoadonxuat.phiship', DB::raw('sum(chitietxuat.soluong*chitietxuat.giaban) AS total_sales'))
-
-                            ->groupBy('hoadonxuat.id', 'users.ten', 'hoadonxuat.created_at', 'hoadonxuat.trangthai', 'hoadonxuat.phuongthucthanhtoan', 'hoadonxuat.diachigiaohang', 'hoadonxuat.nguoigiaohang', 'hoadonxuat.phiship')
-                            ->get();
+                    $orders = $hd->listOrderNotDivision();
                     $i = count($orders);
-
-                    $giaohang = DB::table('phanquyen')
-                                ->where('quyen_id', "quyen-17")
-                                ->join('nhanvien', 'nhanvien.manv', '=', 'phanquyen.nhanvien_manv')
-                                ->select('nhanvien.*')->get();
-
                     $arr = array('Chưa phân công giao hàng', 'Tất cả', 'Đã phân công giao hàng' );
                     return view('web-bansua-admin.order.dongygiaohang', ['orders' => $orders, 'giaohang' => $giaohang,'i' => $i, 'arr' => $arr]);
                 }
 
                 else if($selected === 'Đã phân công giao hàng'){
-                    $orders = DB::table('hoadonxuat')->where('trangthai', "Đồng ý giao hàng")
-                            ->whereNotNull('nguoigiaohang')
-                            ->join('users', 'users.id', '=', 'hoadonxuat.khachhang_id')
-                            ->join('chitietxuat', 'hoadonxuat.id', '=', 'chitietxuat.hoadonxuat_id')
-                            ->join('nhanvien', 'nhanvien.manv', '=', 'hoadonxuat.nguoigiaohang')
-
-                            ->select('nhanvien.ten as nguoigiaohang','users.ten as tenkh', 'hoadonxuat.id','hoadonxuat.created_at', 'hoadonxuat.trangthai', 'hoadonxuat.phuongthucthanhtoan', 'hoadonxuat.diachigiaohang', 'hoadonxuat.phiship', DB::raw('sum(chitietxuat.soluong*chitietxuat.giaban) AS total_sales'))
-
-                            ->groupBy('nhanvien.ten','hoadonxuat.id', 'users.ten', 'hoadonxuat.created_at', 'hoadonxuat.trangthai', 'hoadonxuat.phuongthucthanhtoan', 'hoadonxuat.diachigiaohang', 'hoadonxuat.phiship')
-                            ->get();
+                    
+                    $orders = $hd->listOrderDivision();
                     $i = count($orders);
-                    $giaohang = DB::table('phanquyen')
-                                ->where('quyen_id', "quyen-17")
-                                ->join('nhanvien', 'nhanvien.manv', '=', 'phanquyen.nhanvien_manv')
-                                ->select('nhanvien.*')->get();
-
                     $arr = array( 'Đã phân công giao hàng', 'Tất cả', 'Chưa phân công giao hàng' );
                     return view('web-bansua-admin.order.dongygiaohang', ['orders' => $orders, 'giaohang' => $giaohang,'i' => $i, 'arr' => $arr]);
                 }
@@ -161,15 +123,8 @@ class OrderController extends Controller
 
     public function exported(Request $request){
 
-        $orders = DB::table('hoadonxuat')->where('trangthai', "Đã xuất kho")
-                ->join('users', 'users.id', '=', 'hoadonxuat.khachhang_id')
-                ->join('chitietxuat', 'hoadonxuat.id', '=', 'chitietxuat.hoadonxuat_id')
-                ->join('nhanvien', 'nhanvien.manv', '=', 'hoadonxuat.nguoigiaohang')
-
-                ->select('nhanvien.ten as gh','users.ten as tenkh', 'hoadonxuat.id','hoadonxuat.created_at', 'hoadonxuat.trangthai', 'hoadonxuat.phuongthucthanhtoan', 'hoadonxuat.diachigiaohang', 'hoadonxuat.nguoigiaohang', 'hoadonxuat.phiship', DB::raw('sum(chitietxuat.soluong*chitietxuat.giaban) AS total_sales'))
-
-                ->groupBy('nhanvien.ten','hoadonxuat.id', 'users.ten', 'hoadonxuat.created_at', 'hoadonxuat.trangthai', 'hoadonxuat.phuongthucthanhtoan', 'hoadonxuat.diachigiaohang', 'hoadonxuat.nguoigiaohang', 'hoadonxuat.phiship')
-                ->get();
+        $hd = new HoaDonXuat();
+        $orders = $hd->listOrderExport();
         $i = count($orders);
      
         return view('web-bansua-admin.order.xuatkhoguikhachhang', ['orders' => $orders, 'i' => $i]);
@@ -183,34 +138,19 @@ class OrderController extends Controller
 
     public function search_comleted_order(Request $request){
 
-        $id = $request->search;
+        $id = $request->search_comleted_order;
+        $hd = new HoaDonXuat();
         if(strpos($id, 'Mã đơn hàng -- ') !== false){
             $a = explode(' -- ', $id);
-            $orders = HoaDonXuat::where('hoadonxuat.id', $a[1])
-                    ->join('users', 'users.id', '=', 'hoadonxuat.khachhang_id')
-                    ->join('chitietxuat', 'hoadonxuat.id', '=', 'chitietxuat.hoadonxuat_id')
-
-                    ->select('users.ten as tenkh', 'hoadonxuat.id','hoadonxuat.created_at', 'hoadonxuat.trangthai', 'hoadonxuat.phuongthucthanhtoan', 'hoadonxuat.diachigiaohang', 'hoadonxuat.nguoigiaohang', 'hoadonxuat.phiship', DB::raw('sum(chitietxuat.soluong*chitietxuat.giaban) AS total_sales'))
-
-                    ->groupBy('hoadonxuat.id', 'users.ten', 'hoadonxuat.created_at', 'hoadonxuat.trangthai', 'hoadonxuat.phuongthucthanhtoan', 'hoadonxuat.diachigiaohang', 'hoadonxuat.nguoigiaohang', 'hoadonxuat.phiship')
-                    ->get();
+            $orders = $hd->searchOrderById($a[1]);
         }
         else{
-            $orders = DB::table('hoadonxuat')->join('users', 'users.id', '=', 'hoadonxuat.khachhang_id')
-                    ->whereIn('trangthai', ["Hủy","Thành công", "Trả lại", "Giao hàng không thành công"])
-                    ->where(function ($query) use ($id) {
-                            $query->where('hoadonxuat.id', 'LIKE', '%'.$id.'%')
-                                ->orwhere('users.ten', 'LIKE', '%'.$id.'%');
-                        })
-                    ->join('chitietxuat', 'hoadonxuat.id', '=', 'chitietxuat.hoadonxuat_id')
-                    ->select('users.ten as tenkh', 'hoadonxuat.id','hoadonxuat.created_at', 'hoadonxuat.trangthai', 'hoadonxuat.phuongthucthanhtoan', 'hoadonxuat.diachigiaohang', 'hoadonxuat.nguoigiaohang', 'hoadonxuat.phiship', DB::raw('sum(chitietxuat.soluong*chitietxuat.giaban) AS total_sales'))
-
-                    ->groupBy('hoadonxuat.id', 'users.ten', 'hoadonxuat.created_at', 'hoadonxuat.trangthai', 'hoadonxuat.phuongthucthanhtoan', 'hoadonxuat.diachigiaohang', 'hoadonxuat.nguoigiaohang', 'hoadonxuat.phiship')
-                    
-                    ->get();
+            $orders = $hd->searchOrder($id);
 
         }
         if(!empty($orders)){
+            $request->session()->forget('orders');
+
             $request->session()->put('orders', $orders);
         }
         
@@ -276,13 +216,8 @@ class OrderController extends Controller
     public function search_autocomplete(Request $request){
         $query = $request->get('term');
         
-        $search = DB::table('hoadonxuat')->join('users', 'users.id', '=', 'hoadonxuat.khachhang_id')
-                    ->where('hoadonxuat.id', 'LIKE', '%'.$query.'%')
-                    ->orwhere('users.ten', 'LIKE', '%'.$query.'%')
-                    ->select('hoadonxuat.*', 'users.ten as tenkh')
-                    ->orderBy('id', 'asc')
-                    ->take(8)
-                    ->get();
+        $hd = new HoaDonXuat();
+        $search = $hd->search_autocomplete($query);
         $orders = array();
             $status = array("Hủy","Thành công", "Trả lại", "Giao hàng không thành công");
             foreach ($search as $value) {
@@ -305,13 +240,8 @@ class OrderController extends Controller
     public function autoComplete(Request $request) {
         $query = $request->get('term');
         
-        $orders = HoaDonXuat::join('users', 'users.id', '=', 'hoadonxuat.khachhang_id')
-                    ->where('hoadonxuat.id', 'LIKE', '%'.$query.'%')
-                    ->orwhere('users.ten', 'LIKE', '%'.$query.'%')
-                    ->select('hoadonxuat.*', 'users.ten as tenkh')
-                    ->orderBy('id', 'asc')
-                    ->take(6)
-                    ->get();
+        $hd = new HoaDonXuat();
+        $orders = $hd->search_autocomplete($query);
         
         $data=array();
         foreach ($orders as $order) {
@@ -328,26 +258,15 @@ class OrderController extends Controller
             $request->session()->forget('search_orders');
         }
 
+        $hd = new HoaDonXuat();
+
         $id = $request->input('search_order');
         if(strpos($id, "Mã đơn hàng -- ") !== false){
             $a = explode(' -- ', $id);
-            $product_id =  $a[1];
-            $orders = DB::table('hoadonxuat')->where('hoadonxuat.id', $product_id)
-                    ->join('users', 'users.id', '=', 'hoadonxuat.khachhang_id')
-                    ->join('chitietxuat', 'hoadonxuat.id', '=', 'chitietxuat.hoadonxuat_id')
-                    ->select('users.ten as tenkh','hoadonxuat.id','hoadonxuat.created_at', 'hoadonxuat.trangthai', 'hoadonxuat.phuongthucthanhtoan', 'hoadonxuat.diachigiaohang', 'hoadonxuat.phiship', DB::raw('sum(chitietxuat.soluong*chitietxuat.giaban) AS total_sales'))
-                    ->groupBy('hoadonxuat.id', 'users.ten', 'hoadonxuat.created_at', 'hoadonxuat.trangthai', 'hoadonxuat.phuongthucthanhtoan', 'hoadonxuat.diachigiaohang', 'hoadonxuat.phiship')
-                    ->get();
+            $orders = $hd->search($a[1]);
         }
         else{
-            $orders = HoaDonXuat::join('users', 'users.id', '=', 'hoadonxuat.khachhang_id')
-                    ->join('chitietxuat', 'hoadonxuat.id', '=', 'chitietxuat.hoadonxuat_id')
-                    ->where('hoadonxuat.id', 'LIKE', '%'.$id.'%')
-                    ->orwhere('users.ten', 'LIKE', '%'.$id.'%')
-                    ->select('users.ten as tenkh','hoadonxuat.id','hoadonxuat.created_at', 'hoadonxuat.trangthai', 'hoadonxuat.phuongthucthanhtoan', 'hoadonxuat.diachigiaohang', 'hoadonxuat.phiship', DB::raw('sum(chitietxuat.soluong*chitietxuat.giaban) AS total_sales'))
-                    ->groupBy('hoadonxuat.id', 'users.ten', 'hoadonxuat.created_at', 'hoadonxuat.trangthai', 'hoadonxuat.phuongthucthanhtoan', 'hoadonxuat.diachigiaohang', 'hoadonxuat.phiship')
-                    ->take(10)
-                    ->get(); 
+            $orders = $hd->searchRandom($id);
 
         }
         if(!empty($orders)){
@@ -362,3 +281,4 @@ class OrderController extends Controller
     }
 
 }
+
